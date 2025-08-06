@@ -4,11 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SendEmail = () => {
-  console.log(
-    import.meta.env.VITE_PUBLIC_SERVICE_ID,
-    import.meta.env.VITE_PUBLIC_TEMPLATE_ID,
-    import.meta.env.VITE_PUBLIC_USER_KEY
-  );
   const form = useRef();
   const [btnDisable, setBtnDisable] = useState(false);
   const [loading, setLoading] = useState(false);

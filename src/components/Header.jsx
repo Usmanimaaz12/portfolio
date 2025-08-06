@@ -1,0 +1,28 @@
+const Header = () => {
+  return (
+    <div className="fixed top-0 left-0 right-0 md:px-0 px-6 py-4 flex justify-between md:w-11/12 w-full m-auto items-center  backdrop-filter md:backdrop-blur-sm backdrop-blur-xl z-40 ">
+      <a href="/" className="text-[#3f3f41] logo md:text-[1.3rem] text-xl">
+        Maaz.Usmani
+      </a>
+      <ul className="md:hidden md:gap-12 gap-4 items-center md:text-sm text-xs hidden">
+        <li className="hover:text-blue-600 cursor-pointer">Home</li>
+        <li className="hover:text-blue-600 cursor-pointer">About</li>
+        <li className="hover:text-blue-600 cursor-pointer">Projects</li>
+        <li className="hover:text-blue-600 cursor-pointer">Contact</li>
+      </ul>
+      <div className="contact_icons">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/maaz-usmani-109a33206/"
+        >
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://github.com/Usmanimaaz12">
+          <i className="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

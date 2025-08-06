@@ -1,0 +1,84 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { EXPERIENCE_DATA } from "../Data.js";
+
+const ExperienceComp = () => {
+  const startDate = new Date("2024-03-06"); // Start date
+  const currentDate = new Date();
+
+  // Calculate total months of experience
+  const totalMonths =
+    (currentDate.getFullYear() - startDate.getFullYear()) * 12 +
+    (currentDate.getMonth() - startDate.getMonth());
+
+  // Convert to years and months
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  // Format the experience string
+  const experienceString =
+    years > 0
+      ? `${years} ${years === 1 ? "Year" : "Years"}${
+          months > 0 ? ` ${months} ${months === 1 ? "Month" : "Months"}` : ""
+        }`
+      : `${months} ${months === 1 ? "Month" : "Months"}`;
+
+  return (
+    <div className="py-10 md:py-16 flex flex-col md:gap-16 gap-8 items-center">
+      <h2 className="md:hidden font-medium uppercase">* Projects *</h2>
+      <h2 className="text-5xl uppercase md:block hidden  font-bold whitespace-nowrap z-30 text-slate-400 animate-pulse opacity-25">
+        Projects
+      </h2>
+      <ul className="md:w-7/12 w-full mx-auto flex flex-col md:gap-14 gap-10 bg-white bg-opacity-50 backdrop-blur-xl backdrop-saturate-150 backdrop-opacity-80  shadow-sm md:p-8 px-4 py-8 rounded-3xl z-30">
+        <li className="flex-col gap-20">
+          <div className="flex gap-3 items-center">
+            <div className="flex w-6 h-6 justify-center items-center bg-blue-500 rounded-full">
+              <Icon
+                icon="mdi:shield-person"
+                width="1em"
+                height="1em"
+                style={{ color: "white" }}
+              />
+            </div>
+            <h3 className="text-lg">Squareboat Solutions Pvt Ltd</h3>
+          </div>
+          <div className=" border-l border-gray-400 px-6 mx-3 my-1 flex flex-col md:gap-3 gap-6">
+            <p className="text-sm text-gray-400 flex items-center flex-wrap gap-x-3">
+              March 2024 - Present{" "}
+              <span className="h-1 w-1 flex justify-center items-center bg-gray-400 rounded-full"></span>
+              {experienceString}
+            </p>
+            {EXPERIENCE_DATA?.map((item) => {
+              return (
+                <div key={item?.id} className="text-base text-gray-500">
+                  <span className=" flex items-center gap-1 font-medium">
+                    <a
+                      href={item?.projectUrl}
+                      className="flex items-center gap-1 mb-1 md:mb-0 text-lg md:text-base"
+                      target="_blank"
+                    >
+                      Project {item?.id} : {item?.projectName}
+                      <Icon
+                        icon="heroicons-solid:external-link"
+                        className="text-blue-500"
+                        width="1em"
+                        height="1em"
+                      />
+                    </a>
+                  </span>
+                  <p className="mb-2 text-[15px] text-gray-400">
+                    Tech stack : {item?.techStack}
+                  </p>
+                  <p className="text-gray-400 text-[15px]">
+                    Description : {item?.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default ExperienceComp;

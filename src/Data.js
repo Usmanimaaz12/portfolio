@@ -19,7 +19,7 @@ export const EXPERIENCE_DATA = [
   {
     id: 3,
     projectName: "Job-Portal",
-    projectUrl: "https://job-portal-maaz.netlify.app/",
+    projectUrl: null,
     techStack:
       "React.js, NestJs, Ant Design, Tailwind CSS, Redis, Tanstack Query",
     description:
@@ -28,7 +28,7 @@ export const EXPERIENCE_DATA = [
   {
     id: 4,
     projectName: "ChitChat",
-    projectUrl: "https://chitchat-maaz.netlify.app/",
+    projectUrl: "https://chitchat-ucw2.onrender.com/",
     techStack: "React.js, Express.js, Node.js, MongoDB, Socket.io",
     description:
       "Created a real-time chat application using the MERN stack with Socket.io for instantaneous communication. Implemented secure user authentication, one-to-one and group chat functionalities, and real-time notifications. Ensured data security with encrypted MongoDB storage, delivering a feature-rich and scalable chat environment with a focus on user experience.",

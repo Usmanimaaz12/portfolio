@@ -57,12 +57,14 @@ const ExperienceComp = () => {
                       target="_blank"
                     >
                       Project {item?.id} : {item?.projectName}
-                      <Icon
-                        icon="heroicons-solid:external-link"
-                        className="text-blue-500"
-                        width="1em"
-                        height="1em"
-                      />
+                      {item?.projectUrl && (
+                        <Icon
+                          icon="heroicons-solid:external-link"
+                          className="text-blue-500"
+                          width="1em"
+                          height="1em"
+                        />
+                      )}
                     </a>
                   </span>
                   <p className="mb-2 text-[15px] text-gray-400">

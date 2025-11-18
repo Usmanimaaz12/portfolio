@@ -17,7 +17,7 @@ export const EXPERIENCE_DATA = [
       "Developed a subscription-based platform with Next.js, integrating Razorpay Payment Gateway for seamless payment processing. Implemented interactive PDF rendering with a book-like flip-page experience, enhanced with realistic sound effects. Optimized core web vitals, achieving a 25% reduction in load time and a 12% overall performance boost through image and network request optimizations.",
   },
   {
-    id: 2,
+    id: 3,
     projectName: "GrayPorter Admin Panel",
     projectUrl: "https://grayporter.com/",
     techStack:
@@ -26,7 +26,7 @@ export const EXPERIENCE_DATA = [
       "Single-handedly architected and developed a full-featured, multi-tenant B2B logistics admin dashboard serving 50+ internal stakeholders at GrayPorter (Oct 2024 – Apr 2025). Built 10+ complex modules including Products, Orders, Invoices, Customers, Categories, Courier Partners, Audit Logs, Email Templates, and Settings using React.js, Next.js, TypeScript, and Tailwind CSS. Leveraged RTK Query for efficient server-state management, reducing API calls by 60% and enabling real-time synchronization across dashboards. Designed and implemented a complete invoicing system with dynamic tax calculation, PDF generation, and automated email delivery powered by NestJS backend. Integrated AWS S3 for global asset delivery. Enforced strict Role-Based Access Control (RBAC) with granular permissions ensuring secure data isolation. Achieved near-zero runtime errors in production through comprehensive form validation, React error boundaries, and proactive monitoring via Sentry.",
   },
   {
-    id: 3,
+    id: 4,
     projectName: "Job-Portal",
     projectUrl: null,
     techStack:

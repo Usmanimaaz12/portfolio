@@ -17,6 +17,15 @@ export const EXPERIENCE_DATA = [
       "Developed a subscription-based platform with Next.js, integrating Razorpay Payment Gateway for seamless payment processing. Implemented interactive PDF rendering with a book-like flip-page experience, enhanced with realistic sound effects. Optimized core web vitals, achieving a 25% reduction in load time and a 12% overall performance boost through image and network request optimizations.",
   },
   {
+    id: 2,
+    projectName: "GrayPorter Admin Panel",
+    projectUrl: "https://grayporter.com/",
+    techStack:
+      "React.js, Next.js, TypeScript, RTK Query, TanStack Query, Tailwind CSS, NestJS, PostgreSQL, AWS S3",
+    description:
+      "Single-handedly architected and developed a full-featured, multi-tenant B2B logistics admin dashboard serving 50+ internal stakeholders at GrayPorter (Oct 2024 – Apr 2025). Built 10+ complex modules including Products, Orders, Invoices, Customers, Categories, Courier Partners, Audit Logs, Email Templates, and Settings using React.js, Next.js, TypeScript, and Tailwind CSS. Leveraged RTK Query for efficient server-state management, reducing API calls by 60% and enabling real-time synchronization across dashboards. Designed and implemented a complete invoicing system with dynamic tax calculation, PDF generation, and automated email delivery powered by NestJS backend. Integrated AWS S3 for global asset delivery. Enforced strict Role-Based Access Control (RBAC) with granular permissions ensuring secure data isolation. Achieved near-zero runtime errors in production through comprehensive form validation, React error boundaries, and proactive monitoring via Sentry.",
+  },
+  {
     id: 3,
     projectName: "Job-Portal",
     projectUrl: null,
@@ -24,13 +33,5 @@ export const EXPERIENCE_DATA = [
       "React.js, NestJs, Ant Design, Tailwind CSS, Redis, Tanstack Query",
     description:
       "Built a full-stack job portal using NestJs for the backend and React with Ant Design for the frontend, enabling full CRUD operations for three user roles. Implemented message queues for action-triggered emails and OTP-based password reset functionality with Redis. Integrated Google reCAPTCHA v3 for enhanced security and spam prevention, delivering a robust and user-friendly platform.",
-  },
-  {
-    id: 4,
-    projectName: "ChitChat",
-    projectUrl: "https://chitchat-ucw2.onrender.com/",
-    techStack: "React.js, Express.js, Node.js, MongoDB, Socket.io",
-    description:
-      "Created a real-time chat application using the MERN stack with Socket.io for instantaneous communication. Implemented secure user authentication, one-to-one and group chat functionalities, and real-time notifications. Ensured data security with encrypted MongoDB storage, delivering a feature-rich and scalable chat environment with a focus on user experience.",
   },
 ];

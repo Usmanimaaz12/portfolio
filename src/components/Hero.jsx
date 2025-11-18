@@ -7,7 +7,7 @@ const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1Mnmr3xlFMRMxjv85Lz2MD351fPifnAHJ/view?usp=sharing";
+      "https://drive.google.com/file/d/1c4INbRCdWKLqsrjmddYxGbq_ZKslYUIF/view?usp=drive_link";
     link.target = "_blank";
     link.download = "maaz_resume";
     document.body.appendChild(link);

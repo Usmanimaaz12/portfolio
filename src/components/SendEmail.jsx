@@ -9,8 +9,8 @@ const SendEmail = () => {
   const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
     if (
       form.current.user_name.value === "" ||
       form.current.user_email.value === "" ||
@@ -30,24 +30,23 @@ const SendEmail = () => {
           publicKey: import.meta.env.VITE_PUBLIC_USER_KEY,
         }
       )
-      .then(
-        () => {
-          toast.success("Email sent successfully!", {
-            position: "bottom-center",
-          });
-          form.current.reset();
-          setTimeout(() => {
-            setBtnDisable(false);
-          }, 1000);
-        },
-        (error) => {
-          toast.error("Failed to send email.", {
-            position: "bottom-center",
-          });
-          console.log("FAILED...", error.text);
-        }
-      );
-    setLoading(false);
+      .then(() => {
+        toast.success("Email sent successfully!", {
+          position: "bottom-right",
+        });
+        form.current.reset();
+        setBtnDisable(false);
+      })
+      .catch((error) => {
+        toast.error("Failed to send email.", {
+          position: "bottom-right",
+        });
+        console.log("FAILED...", error?.text || error);
+        setBtnDisable(false);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
